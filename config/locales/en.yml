@@ -1,0 +1,5 @@
+en:
+  common:
+    notice:
+      success: 'Success'
+      fail: 'Fail'

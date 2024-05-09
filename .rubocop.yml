@@ -1,0 +1,119 @@
+require:
+  - rubocop-factory_bot
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Layout/LineLength:
+  AutoCorrect: false
+  Exclude:
+    - 'spec/**/*'
+
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+    - 'spec/**/*'
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Metrics:
+  Enabled: false
+
+Rails/ActionOrder:
+  Enabled: true
+  Include:
+    - 'app/controllers/**/*.rb'
+    - 'app/policies/**/*.rb'
+  ExpectedOrder:
+    - index
+    - index?
+    - show
+    - show?
+    - create
+    - create?
+    - update
+    - update?
+    - destroy
+    - destroy?
+
+Rails/Blank:
+  UnlessPresent: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/ImplicitExpect:
+  EnforcedStyle: should
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleDescribes:
+  Exclude:
+    - 'spec/policies/**/*'
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/controllers/**/*'
+    - 'app/jobs/serializers/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  AutoCorrect: false
+  AllowedPatterns:
+    - '^(?!.*_path).*$'
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingUnderscoreVariable:
+  Enabled: false
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false
